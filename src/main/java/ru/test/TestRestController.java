@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -16,10 +15,10 @@ public class TestRestController {
     Entity entity2 = new Entity(2L, "testName2");
 
     @GetMapping
-    public Entity entities() {
-        /*List<Entity> list = new ArrayList<>();
+    public List<Entity> entities() {
+        List<Entity> list = new ArrayList<>();
         list.add(entity);
-        list.add(entity2);*/
-        return entity;
+        list.add(entity2);
+        return list;
     }
 }
